@@ -1,11 +1,4 @@
-A disgruntled ex-employee has hidden a server access
-code in a Windows machine in the 192.168.0.0/24 subnet. You
-cannot physically access the target machine, but you know
-that the organization has installed a RAT in the machine for
-remote administration purposes. Your task is to retrieve the
-"sa_code.txt" file from the target machine and enter the string
-in the file as the answer. (Format:AA*NNaAa)
-
+Capture in burp 
 
 
 theef rat port - 9871,6703,5552
@@ -42,8 +35,26 @@ cybersec.cehorg.com, available at 172.20.0.22. Find the value
 in the Flag column in one of the DB tables and enter it as the
 answer. (Format: ykPje8Qb)
 
+
+Attacker Machine: Parrot OS (or Kali) with Nmap, Burp Suite, and SQLMap installed.
+Target: www.cehorg.com (resolves to 192.168.0.4 in the lab environment).
+Proxy Setup: Configure your browser (e.g., Firefox) to proxy traffic through Burp Suite (default: 127.0.0.1:8080) to intercept requests.
+Caution: This is for educational/lab purposes only (e.g., TryHackMe EH Workstation room). Do not use on production sites without permission.
+
+Step-by-Step Instructions
+
+Perform Script Scanning with Nmap on the Target Domain or IP Address
+Open a terminal on Parrot OS.
+Run the following command to scan for web vulnerabilities (including SQLi indicators) and open ports:text
 Open the url -
 check in wapalyzer if it is java based. = use JSQL tool in parrot to inject - check for steps in google.
 
 
+A disgruntled ex-employee has hidden a server access
+code in a Windows machine in the 192.168.0.0/24 subnet. You
+cannot physically access the target machine, but you know
+that the organization has installed a RAT in the machine for
+remote administration purposes. Your task is to retrieve the
+"sa_code.txt" file from the target machine and enter the string
+in the file as the answer. (Format:AA*NNaAa)
 
